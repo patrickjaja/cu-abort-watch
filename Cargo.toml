@@ -1,0 +1,21 @@
+[package]
+name = "cu-abort-watch"
+version = "0.1.0"
+edition = "2024"
+# File::try_lock (holder-set lock)
+rust-version = "1.89"
+license = "MIT"
+description = "Shared half of the `abort-watch` subcommand of the claude-desktop-extra Computer Use bridges (Escape = stop)"
+repository = "https://github.com/patrickjaja/cu-abort-watch"
+publish = false
+
+[dependencies]
+# Pure Rust, no C dependencies: builds static for the musl targets.
+libc = { version = "0.2.186", default-features = false, features = ["std"] }
+serde = { version = "1.0.228", default-features = false, features = ["derive", "std"] }
+serde_json = { version = "1.0.149", default-features = false, features = ["std"] }
+
+[dev-dependencies]
+# Only for examples/fake.rs: proves the crate works under a tokio runtime
+# without the crate itself depending on one.
+tokio = { version = "1.52.3", default-features = false, features = ["rt-multi-thread", "time"] }
