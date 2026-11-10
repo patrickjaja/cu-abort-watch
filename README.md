@@ -6,7 +6,7 @@ Each bridge supplies the compositor-specific watcher (a `Backend`): XInput2 raw 
 
 Pure Rust (`libc`, `serde`, `serde_json`), no async runtime, no C dependencies: builds static for `x86_64-unknown-linux-musl` and `aarch64-unknown-linux-musl`.
 
-## Contract (bridge CLI contract v2)
+## Contract (optional part of the bridge CLI contract)
 
 Claude Desktop spawns `<bridge> abort-watch` while Computer Use holds the lock and talks to it over pipes.
 

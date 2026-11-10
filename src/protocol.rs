@@ -1,4 +1,4 @@
-//! Wire format of `abort-watch` (contract v2): JSON lines on stdout, plain
+//! Wire format of `abort-watch` (optional contract addition): JSON lines on stdout, plain
 //! command lines on stdin.
 
 use serde::Serialize;
